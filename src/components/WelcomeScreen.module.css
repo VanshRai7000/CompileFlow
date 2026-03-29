@@ -1,0 +1,73 @@
+.wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(15, 23, 42, .5);
+    border: 1px solid #1e293b;
+    border-radius: 1.25rem;
+}
+
+.iconWrap {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: rgba(168, 85, 247, .08);
+    border: 1px solid rgba(168, 85, 247, .18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 30px rgba(168, 85, 247, .12);
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    margin-bottom: 0.75rem;
+}
+
+.sub {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.featureGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 28rem;
+    margin-bottom: 2rem;
+}
+
+.featureChip {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(30, 41, 59, .6);
+    border: 1px solid rgba(51, 65, 85, .5);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    font-size: 0.78rem;
+    color: #94a3b8;
+    text-align: left;
+}
+
+.featureDot {
+    color: #10b981;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.arrow {
+    font-size: 0.75rem;
+    color: #334155;
+    margin-top: 0.5rem;
+}

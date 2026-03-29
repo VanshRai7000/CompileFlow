@@ -1,0 +1,226 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: calc(100vh - 6rem);
+    position: sticky;
+    top: 5rem;
+    overflow-y: auto;
+    padding-bottom: 0.5rem;
+    padding-right: 0.25rem;
+}
+
+/* Cards */
+.card {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+}
+
+.pipelineCard {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+    flex-shrink: 0;
+}
+
+/* Card Header */
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #cbd5e1;
+}
+
+.resetBtn {
+    font-size: 0.72rem;
+    color: #475569;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+.resetBtn:hover {
+    color: #a855f7;
+    background: rgba(168, 85, 247, .08);
+}
+
+/* Editor */
+.editor {
+    flex: 1;
+    width: 100%;
+    background: #0d1117;
+    border: 1px solid #334155;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+    resize: none;
+    outline: none;
+    min-height: 200px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.editor:focus {
+    border-color: #a855f7;
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, .2);
+}
+
+/* Error Banner */
+.errorBanner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, .08);
+    border: 1px solid rgba(239, 68, 68, .2);
+    border-radius: 0.5rem;
+    color: #f87171;
+    font-size: 0.82rem;
+}
+
+.errorIcon {
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+/* Compile Button */
+.compileBtn {
+    width: 100%;
+    margin-top: 0.875rem;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #9333ea, #d946ef);
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.625rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(147, 51, 234, .35);
+    flex-shrink: 0;
+}
+
+.compileBtn:hover:not(:disabled) {
+    opacity: 0.92;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(147, 51, 234, .45);
+}
+
+.compileBtn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.spinnerIcon {
+    display: inline-block;
+}
+
+/* Pipeline Header */
+.pipelineHeader {
+    padding: 0.6rem 1rem;
+    border-bottom: 1px solid #1e293b;
+    background: rgba(30, 41, 59, .5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pipelineTitle {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background 0.3s, box-shadow 0.3s;
+    flex-shrink: 0;
+}
+
+/* Phase Buttons */
+.pipelineNav {
+    padding: 0.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.phaseBtn {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    transition: background 0.15s, color 0.15s, border-color 0.2s;
+}
+
+.phaseBtn:hover {
+    background: rgba(30, 41, 59, .8);
+    color: #e2e8f0;
+}
+
+.phaseBtnActive {
+    background: rgba(30, 41, 59, .9);
+    color: #e2e8f0;
+    transform: none;
+}
+
+.phaseLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.phaseIconWrap {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.checkIcon {
+    font-size: 0.75rem;
+    font-weight: 700;
+    animation: fadeInUp 0.3s ease-out forwards;
+}

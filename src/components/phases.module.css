@@ -1,0 +1,472 @@
+/* Wrapper fills parent height */
+.phaseWrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main card */
+.phaseCard {
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+    overflow: hidden;
+}
+
+/* Phase header */
+.phaseHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.phaseTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.phaseDesc {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: 0.15rem;
+}
+
+.badgeRow {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.tagBadge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    border: 1px solid;
+    white-space: nowrap;
+}
+
+.statChip {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.25rem 0.7rem;
+    border-radius: 9999px;
+    background: rgba(168, 85, 247, .12);
+    color: #c084fc;
+    border: 1px solid rgba(168, 85, 247, .25);
+    flex-shrink: 0;
+}
+
+/* Table */
+.tableWrap {
+    flex: 1;
+    overflow: auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(51, 65, 85, .6);
+    background: #0d1117;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #1e293b;
+}
+
+.table thead th {
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #64748b;
+    border-bottom: 1px solid #334155;
+}
+
+.centerTable th {
+    text-align: center;
+}
+
+.centerTable td {
+    text-align: center;
+}
+
+.tableRow {
+    border-bottom: 1px solid rgba(30, 41, 59, .6);
+    transition: background 0.15s;
+}
+
+.tableRow:hover {
+    background: rgba(30, 41, 59, .7);
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.tableRow td {
+    padding: 0.55rem 0.9rem;
+    vertical-align: middle;
+}
+
+.indexCell {
+    color: #475569;
+    font-size: 0.72rem;
+    width: 2.5rem;
+}
+
+.lexemeCell {
+    color: #c084fc;
+    font-weight: 600;
+}
+
+.posCell {
+    color: #475569;
+    font-size: 0.72rem;
+}
+
+.nameCell {
+    color: #c084fc;
+    font-weight: 700;
+}
+
+.typeCell {
+    color: #e879f9;
+}
+
+.memCell {
+    color: #34d399;
+    font-size: 0.72rem;
+}
+
+.opCell {
+    color: #e879f9;
+    font-weight: 700;
+}
+
+.resCell {
+    color: #34d399;
+    font-weight: 700;
+}
+
+.dimCell {
+    color: #94a3b8;
+}
+
+.emptyCell {
+    text-align: center;
+    color: #475569;
+    font-style: italic;
+    padding: 1.5rem;
+}
+
+.typeBadge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.18rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+/* Two-column layout */
+.twoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.875rem;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Sub-cards */
+.subCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(51, 65, 85, .6);
+    border-radius: 0.6rem;
+    background: #0d1117;
+    overflow: hidden;
+}
+
+.subCardHead {
+    padding: 0.5rem 0.875rem;
+    background: rgba(30, 41, 59, .7);
+    border-bottom: 1px solid rgba(51, 65, 85, .5);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #94a3b8;
+    flex-shrink: 0;
+}
+
+/* Code block */
+.codeBlock {
+    flex: 1;
+    padding: 0.875rem;
+    overflow: auto;
+    font-size: 0.78rem;
+    line-height: 1.75;
+}
+
+.codeLine {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.08rem 0;
+    white-space: pre;
+}
+
+.lineNum {
+    color: #334155;
+    user-select: none;
+    min-width: 1.4rem;
+}
+
+/* Logs */
+.logsList {
+    flex: 1;
+    padding: 0.875rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.logEntry {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+.logIconOk {
+    color: #10b981;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+.logIconError {
+    color: #ef4444;
+    font-size: 0.7rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+}
+
+/* Scope badge */
+.scopeBadge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 0.18rem 0.5rem;
+    border-radius: 9999px;
+    background: rgba(30, 41, 59, .8);
+    border: 1px solid #334155;
+    color: #94a3b8;
+}
+
+/* Opt Log */
+.optLog {
+    margin-top: 0.875rem;
+    padding: 0.75rem 1rem;
+    background: rgba(234, 179, 8, .04);
+    border: 1px solid rgba(234, 179, 8, .15);
+    border-radius: 0.6rem;
+    flex-shrink: 0;
+}
+
+.optLogTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #ca8a04;
+    margin-bottom: 0.4rem;
+}
+
+.optLogList {
+    list-style: disc;
+    list-style-position: inside;
+    font-size: 0.76rem;
+    color: #94a3b8;
+    max-height: 4.5rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+/* AST Container */
+.astContainer {
+    flex: 1;
+    position: relative;
+    background: #f8fafc;
+    border: 1px solid rgba(51, 65, 85, .4);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    min-height: 300px;
+}
+
+/* Assembly layout */
+.asmLayout {
+    display: flex;
+    gap: 0.875rem;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.asmBlock {
+    flex: 1;
+    background: #0d1117;
+    border: 1px solid rgba(51, 65, 85, .6);
+    border-radius: 0.6rem;
+    padding: 0.875rem;
+    overflow: auto;
+    font-size: 0.78rem;
+}
+
+.asmHeader {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.68rem;
+    color: #475569;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.asmCol16 {
+    width: 4.5rem;
+    flex-shrink: 0;
+}
+
+.asmRow {
+    display: flex;
+    gap: 1rem;
+    padding: 0.1rem 0;
+}
+
+.asmRow:hover {
+    background: rgba(30, 41, 59, .5);
+    border-radius: 4px;
+}
+
+.asmLabel {
+    color: #a855f7;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    padding: 0.1rem 0;
+}
+
+.asmAddr {
+    width: 4.5rem;
+    color: #475569;
+    flex-shrink: 0;
+}
+
+.asmOp {
+    width: 4.5rem;
+    color: #34d399;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.asmOperand {
+    flex: 1;
+    color: #cbd5e1;
+}
+
+.asmComment {
+    color: #475569;
+    margin-left: 1rem;
+}
+
+.asmInfo {
+    width: 12rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    overflow-y: auto;
+}
+
+.infoCard {
+    background: rgba(30, 41, 59, .5);
+    border: 1px solid rgba(51, 65, 85, .6);
+    border-radius: 0.6rem;
+    padding: 0.75rem;
+}
+
+.infoCardFlex {
+    flex: 1;
+}
+
+.infoLabel {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #475569;
+    margin-bottom: 0.35rem;
+}
+
+.infoValue {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.regList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.regBadge {
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    background: rgba(59, 130, 246, .12);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, .25);
+    font-size: 0.68rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.instrList {
+    list-style: none;
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.72rem;
+    color: #94a3b8;
+}
